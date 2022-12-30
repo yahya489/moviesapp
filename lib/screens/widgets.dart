@@ -172,10 +172,9 @@ class Scrolling extends StatelessWidget {
 
 class FavoritesMoviesCards extends StatelessWidget {
   List dataList;
-  bool isFavoriteList;
+
   FavoritesMoviesCards({
     required this.dataList,
-    required this.isFavoriteList,
   });
 
   @override
@@ -254,18 +253,16 @@ class FavoritesMoviesCards extends StatelessWidget {
                                             Icons.star,
                                             color: Colors.green,
                                           ),
-                                          isFavoriteList
-                                              ? IconButton(
-                                                  onPressed: () {
-                                                    provider
-                                                        .removeMovieFromFavoriteList(
-                                                            dataList[index]);
-                                                  },
-                                                  icon: const Icon(
-                                                    Icons.delete,
-                                                    color: Colors.red,
-                                                  ))
-                                              : Container(),
+                                          IconButton(
+                                              onPressed: () {
+                                                provider
+                                                    .removeMovieFromFavoriteList(
+                                                        dataList[index]);
+                                              },
+                                              icon: const Icon(
+                                                Icons.delete,
+                                                color: Colors.red,
+                                              )),
                                         ],
                                       ),
                                     )

@@ -32,8 +32,7 @@ class FavoritesScreen extends StatelessWidget {
       ),
       body:
           //Container()
-          FavoritesMoviesCards(
-              isFavoriteList: true, dataList: provider.favoritesList),
+          FavoritesMoviesCards(dataList: provider.favoritesList),
     );
   }
 }
